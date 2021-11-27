@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascropt_test</title>
+    <style>
+        p {
+            color:black;
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <h4> 
+        Change the text of the text field  
+        ,and then click the button. 
+    </h4> 
+    
+   <input type="text" id="domTextElement1" > 
+    
+    <label for="domTextElement">Name: </label>
+    <input type="text" class="domTextElement2" > 
+    
+    <button type="button"  onclick="getValueInput()"> 
+        click me!! 
+    </button> 
+    
+    <p id="valueInput"></p>  
+  
+<!-- 내가 작성한 코드 -->
+
+    <h1>코드 연습 1</h1>
+
+    <label for="first_input">성을 입력해 주세요 :</label>
+    <input type="text" id="first_input">
+
+    <label for="second_input">이름을 입력해 주세요</label>
+    <input type="text" class="second_input">
+    
+    <button type="button" onclick="getValue()">
+         입력하기 
+    </button>
+
+    <p id="result"></p>
+
+
+
+
+    <!-- 자바스크립트 코드 시작 -->
+
+    <!-- <script> 
+  
+      const getValueInput = () =>{
+        let inputValue1 = document.querySelector("#domTextElement1").value; 
+        let inputValue2 = document.querySelector(".domTextElement2").value; 
+        document.querySelector("#valueInput").innerHTML = `First input value: ${inputValue1} Second Input Value: ${inputValue2}`; 
+      }
+    </script>  -->
+
+    <script>
+        const getValue = () =>{
+            let firstInput = document.querySelector('#first_input').value; // 첫번째 input을 firstInput 으로 선언
+            let secondInput = document.querySelector('.second_input').value;  //두번째 input을 secondInput 으로 선언
+            document.querySelector('#result').innerHTML = ` ${firstInput}  ${secondInput}`;
+        } // p 태그인 #result는 innerHTML명령어의 인해 값을 가져오는데, 그 값은 (=) ``안에 있는 ${firstInput}  ${secondInput} 값이다.
+    </script>
+</body>
+</html>
