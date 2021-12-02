@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript 100제 연습</title>
+</head>
+<body>
+    <script>
+        //Q.1 다음 배열에서 400, 500을 삭제하는 코드를 입력하세요
+
+        var nums = [100, 200, 300, 400, 500];
+        console.log(nums.pop());
+        console.log(nums.pop());
+        console.log(nums);
+
+// ---------------------------------------------------------------------------------------------------------------
+
+        //Q.2 <pass>부분에 배열 내장함수를 이용하여 코드를 입력하고 다음과 같은 값이 출력되게 하세요.
+
+        //데이터
+        // var arr = [200, 100, 300];
+        //pass
+        // console.log(arr);
+        //출력
+        // 200, 100, 10000, 300];
+
+        var arr = [200, 100, 300];
+        //splice(); -> 무언가를 어딘가에 삽입하다.
+        // 3가지 매개변수가 필요하다. 
+        //     1. 변화를 할 원소의 첫번째 인덱스
+        //     2. 제거할 원소의 갯수
+        //     3. 기존의 있던 원소를 삭제하고, 새롭게 삽입할 값을 의미한다. 
+        // -> 해당 부분은 jsbin으로 코드 찍어볼것. 
+        arr.splice(2, 0, 10000);
+        console.log(arr);
+
+// ---------------------------------------------------------------------------------------------------------------
+
+        //Q.3 다음 출력값으로 옳은것은? (내 답 = 4, 정답. )
+
+        // var arr = [100, 200, 300];
+        // console.log(typeof(arr));
+        // 1. undefined
+        // 2. string
+        // 3. number
+        // 4. object
+
+        //자바스크립트 변수의 타입
+        // 1. 원시타입(5) : number, string, boolean, object, undefined
+            console.log(typeof(1234));
+            console.log(typeof('hello'));
+            console.log(typeof(false));
+            console.log(typeof(null));
+            console.log(typeof(undefined));
+
+        // 2. 참조타입(1) : object
+// ---------------------------------------------------------------------------------------------------------------
+        //Q.4 다음 변수 a를 typeof(a)로 넣었을 때 출력될 값과의 연결이 알맞지 않은 것은? (내 답 : 2번 )
+
+        // 1. 입력: a = 1 , 출력 : Number
+        // 2. 입력: a = 2.22, 출력 : Boolean
+        // 3. 입력: a = 'p', 출력 : String
+        // 4. 입력: a = [1,2,3] , 출력 : Object
+        
+
+
+    </script>
+</body>
+</html>
