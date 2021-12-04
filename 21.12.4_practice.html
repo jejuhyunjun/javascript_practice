@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript 연습 </title>
+</head>
+<body>
+    <script>
+        // forEach -> 이해못함
+        const array1 = ['a', 'b', 'c'];
+        console.log(array1);
+        array1.forEach(element =>  console.log(element));
+        //어떤 개념인지 이해가 안됨... 
+//--------------------------------------------------------------------------------------------------------------------
+        //indexOf() -> 이해완료
+        var testIndex = 'abcdef'
+        console.log(testIndex.indexOf('ab'));   // 0
+        console.log(testIndex.indexOf('cd'));   // 2
+        console.log(testIndex.indexOf('ed'));   // -1
+        console.log(testIndex.indexOf('ad'));   // -1
+        console.log(testIndex.indexOf('ff'));   // -1
+//--------------------------------------------------------------------------------------------------------------------
+
+        //join() -> 이해완료
+        var hello = ['yang', 'hyun', 'jun'] ;
+        console.log(hello.join(""));
+        console.log(hello.join('-'));
+        console.log(hello.join('ll'));
+
+//--------------------------------------------------------------------------------------------------------------------
+        // map() - > 이해못함
+        //const array2 = [1, 4, 9, 16];
+        // pass a function to map
+        //const map1 = array2.map('x * 2');
+        //console.log(map1);
+        // expected output: Array [2, 8, 18, 32]
+//--------------------------------------------------------------------------------------------------------------------
+        // pop() -> 이해완료
+        var poppin = ['hyun', 'jun','yang'];
+        console.log(poppin.pop());
+        console.log(poppin); // 'yang' 이 제거된 모습 확인 가능.
+//--------------------------------------------------------------------------------------------------------------------
+        // push() 
+        var pushPush = ['babe', 'push', 'baby', 'maku'];
+        console.log(pushPush.push('big'));
+
+        var 구기종목 = ['축구', '농구', '야구'];
+        var 새로운종목 = 구기종목.push('럭비', '수영');
+        
+        console.log(구기종목);
+        console.log(새로운종목);
+//--------------------------------------------------------------------------------------------------------------------
+        // reverse() -> 이해완료
+        var nums = ['one', 'two', 'three', 'four']
+        console.log('check:', nums);
+        nums.reverse();
+        console.log(nums); // 아래 allNums 와 같은 내용이다. 
+
+        // var allNums = nums.reverse();
+        // console.log('reverse:', allNums);
+//--------------------------------------------------------------------------------------------------------------------
+        // shift() -> 매소드는 이해했으나, while 문의 활용은 이해를 못함. ( 정확히는 ! == undefined 부분.)
+        var array3 = [ , '둘', '셋', '넷']
+        var arrayShift = array3.shift();
+        console.log(array3);
+        console.log(arrayShift);
+        console.log(typeof(arrayShift));
+//--------------------------------------------------------------------------------------------------------------------
+        // slice() -> 이해완료 
+        var oneSlice = ['하나', '둘', '셋', '넷', '다섯']
+        console.log(oneSlice.slice(3)); //3번째 원소부터 새로운 배열을 생성해 반환해줌
+        console.log(oneSlice.slice(1,4)); // 1번째 원소부터 3번재 원소까지 새로운 배열을 생성해 번환해줌.(4번은 포함안됨)
+        console.log(oneSlice.slice(-4)); // -는 뒤에서 부터 카운팅 되어서 반환해줌. 
+        console.log(oneSlice.slice(7,4)); //begin 부분이 배열보다 큰 경우 빈 문자열을 반환함. 
+        console.log(oneSlice.slice(1,-1)); // 두번째 원소부터 뒤에서 두번재 원소까지 반환함. ( begin= '둘' -1=다섯, end 부분이라 제외)
+//--------------------------------------------------------------------------------------------------------------------
+        //sort() ->이해완료
+        var korean = ['하', '다', '차', '마', '가', '파'];
+        korean.sort(); // 유니코드 코드를 기반으로 정리를 해줌.
+        console.log(korean); //원본의 배열을 정리해준다. 
+
+        var numbers = [1, 7, 300, 90000, 10000000000, 20000];
+        numbers.sort(); // 문자열 유니코드 코드를 기반으로 하기때문에 숫자의 크기보단 앞열의 숫자에 정렬을 둔 모습.
+        console.log(numbers); //원본의 배열을 정리해준다.
+//--------------------------------------------------------------------------------------------------------------------
+        //unshift()
+        var names = ['yang', 'hyun', 'jun', 'park', 'kim', 'jae', 'maan'];
+        console.log(names.unshift('what','is')); //1. 새로운 요소를 추가 2. 반환되는 값은 길이 값이다.
+        console.log(names); // 반환된 요소를 확인해 보면 앞에 2개의 요소가 추가되어 반환된것을 확인 할 수 있다. 
+    </script>
+</body>
+</html>
