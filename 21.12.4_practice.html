@@ -56,17 +56,17 @@
         var nums = ['one', 'two', 'three', 'four']
         console.log('check:', nums);
         nums.reverse();
-        console.log(nums); // 아래 allNums 와 같은 내용이다. 
+        console.log(nums);  
 
-        // var allNums = nums.reverse();
-        // console.log('reverse:', allNums);
+        var allNums = nums.reverse();
+        console.log('reverse:', allNums);
 //--------------------------------------------------------------------------------------------------------------------
         // shift() -> 매소드는 이해했으나, while 문의 활용은 이해를 못함. ( 정확히는 ! == undefined 부분.)
-        var array3 = [ , '둘', '셋', '넷']
+        var array3 = ['하나' , '둘', '셋', '넷']
         var arrayShift = array3.shift();
         console.log(array3);
         console.log(arrayShift);
-        console.log(typeof(arrayShift));
+        console.log(typeof(arrayShift)); //// string -> 만약 하나 의 자리가 빈 문자열로 바꾸면 undefined로 값이 나온다.
 //--------------------------------------------------------------------------------------------------------------------
         // slice() -> 이해완료 
         var oneSlice = ['하나', '둘', '셋', '넷', '다섯']
@@ -87,6 +87,7 @@
 //--------------------------------------------------------------------------------------------------------------------
         //unshift()
         var names = ['yang', 'hyun', 'jun', 'park', 'kim', 'jae', 'maan'];
+        console.log(names.length);
         console.log(names.unshift('what','is')); //1. 새로운 요소를 추가 2. 반환되는 값은 길이 값이다.
         console.log(names); // 반환된 요소를 확인해 보면 앞에 2개의 요소가 추가되어 반환된것을 확인 할 수 있다. 
     </script>
